@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Liste de voiture{% endblock %}
+{% block content %}
+    <div class="mt-4">
+        <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+              </tr>
+            </thead>
+            <tbody>
+               {% for locataire in locataires %}
+              <tr>
+
+                <td>{{ locataire['id_loc'] }}</td>
+                <td>{{ locataire['nom'] }}</td>
+                <td>{{ locataire['prenom'] }}</td>
+                <td>{{ locataire['adresse'] }}</td>
+              </tr>
+             {% endfor %}
+            </tbody>
+        </table>
+        </div>
+{% endblock %}
